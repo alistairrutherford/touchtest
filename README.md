@@ -4,7 +4,7 @@ This is a custom control for Flutter which implements a touch surface (like a jo
 
 The control takes a change handler and reports back the x and y position only when it is being moved.
 
-I had a lot of help in putting this together from the Flutter developers on stackoverflow here: https://stackoverflow.com/questions/44515611/flutter-creating-a-custom-control-with-flutter/44521210?noredirect=1#comment76054928_44521210
+I had a lot of help in putting this together from the Flutter developers on stackoverflow here: https://stackoverflow.com/questions/44515611/flutter-creating-a-custom-control-with-flutter
 
 ## Getting Started
 
