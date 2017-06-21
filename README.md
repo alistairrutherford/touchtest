@@ -6,5 +6,5 @@ The control takes a change handler and reports back the x and y position only wh
 
 ## Getting Started
 
-For help getting started with Flutter, view our online
+For help getting started with Flutter, view the  online
 [documentation](http://flutter.io/).
