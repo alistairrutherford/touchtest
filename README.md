@@ -4,6 +4,8 @@ This is a custom control for Flutter which implements a touchpad-like surface (l
 
 The control takes a change handler and reports back the x and y position only when it is being moved.
 
+![Demo](https://github.com/alistairrutherford/images/blob/master/touchpad.gif) 
+
 I had a lot of help in putting this together from the Flutter developers on stackoverflow here: https://stackoverflow.com/questions/44515611/flutter-creating-a-custom-control-with-flutter
 
 ## Getting Started
