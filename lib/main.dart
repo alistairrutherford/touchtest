@@ -39,7 +39,7 @@ class TouchTest extends StatelessWidget {
               ),
             ),
             child: new Center(
-                child: new TouchControl(onChanged: onChanged),
+                child: new TouchPad(onChanged: onChanged),
             ),
           ),
         )
@@ -50,21 +50,21 @@ class TouchTest extends StatelessWidget {
 /**
  * Steteful widget
  */
-class TouchControl extends StatefulWidget {
+class TouchPad extends StatefulWidget {
 
   final ValueChanged<Offset> onChanged;
 
-  const TouchControl({Key key, this.onChanged}) : super(key: key);
+  const TouchPad({Key key, this.onChanged}) : super(key: key);
 
   @override
-  TouchControlState createState() => new TouchControlState();
+  TouchPadState createState() => new TouchPadState();
 }
 
 /**
  * Draws a circle at supplied position.
  *
  */
-class TouchControlState extends State<TouchControl> {
+class TouchPadState extends State<TouchPad> {
   double xPos = 0.0;
   double yPos = 0.0;
 
@@ -112,10 +112,10 @@ class TouchControlState extends State<TouchControl> {
         onPanEnd: _handlePanEnd,
         onPanUpdate: _handlePanUpdate,
         child: new CustomPaint(
-          painter: new GridPainter(),
+          painter: new TouchPadGridPainter(),
           child: new Center(
             child:new CustomPaint(
-              painter: new TouchControlPainter(xPos, yPos),
+              painter: new TouchPadPainter(xPos, yPos),
             ),
           ),
         ),
@@ -128,12 +128,12 @@ class TouchControlState extends State<TouchControl> {
  * Painter.
  *
  */
-class TouchControlPainter extends CustomPainter {
+class TouchPadPainter extends CustomPainter {
   static const markerRadius = 10.0;
 
   Offset position;
 
-  TouchControlPainter(final double x, final double y) {
+  TouchPadPainter(final double x, final double y) {
     this.position = new Offset(x, y);
   }
 
@@ -148,18 +148,18 @@ class TouchControlPainter extends CustomPainter {
 
 
   @override
-  bool shouldRepaint(TouchControlPainter old) => position.dx != old.position.dx && position.dy !=old.position.dy;
+  bool shouldRepaint(TouchPadPainter old) => position.dx != old.position.dx && position.dy !=old.position.dy;
 }
 
 /**
  * Grid Painter.
  *
  */
-class GridPainter extends CustomPainter {
+class TouchPadGridPainter extends CustomPainter {
 
   Offset position;
 
-  GridPainter() {
+  TouchPadGridPainter() {
     this.position = new Offset(0.0, 0.0);
   }
 
@@ -182,5 +182,5 @@ class GridPainter extends CustomPainter {
 
 
   @override
-  bool shouldRepaint(GridPainter old) => position.dx != old.position.dx && position.dy !=old.position.dy;
+  bool shouldRepaint(TouchPadGridPainter old) => position.dx != old.position.dx && position.dy !=old.position.dy;
 }
