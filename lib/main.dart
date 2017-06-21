@@ -8,7 +8,7 @@ void main() {
 }
 
 /**
- * Map view.
+ * Main view.
  *
  */
 class TouchTest extends StatelessWidget {

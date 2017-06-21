@@ -41,7 +41,7 @@ class TouchPadState extends State<TouchPad> {
   @override
   void handleEvent(PointerEvent event, BoxHitTestEntry entry) {
     if (event is PointerDownEvent ) {
-      // 
+      //
     }
   }
 
