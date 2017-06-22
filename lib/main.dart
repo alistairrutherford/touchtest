@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/rendering.dart';
-import 'package:touchtest/TouchPad.dart';
+import 'testform.dart';
 
 void main() {
   runApp(new TouchTest());
@@ -26,7 +26,7 @@ class TouchTest extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-        title: 'Touch Test',
+        title: 'Test Form',
         theme: new ThemeData(
           primarySwatch: Colors.blue,
         ),
@@ -34,20 +34,9 @@ class TouchTest extends StatelessWidget {
           appBar: new AppBar(
             title: const Text('Test'),
           ),
-          body: new Container(
-
-            decoration: new BoxDecoration(
-              color: Colors.white,
-              border: new Border.all(
-                color: Colors.black,
-                width: 2.0,
-              ),
-            ),
-            child: new Center(
-                child: new TouchPad(onChanged: onChanged),
-            ),
-          ),
+          body: new TestForm(),
         )
     );
   }
 }
+
