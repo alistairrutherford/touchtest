@@ -35,14 +35,18 @@ class TouchPadState extends State<TouchPad> {
     double x = position.dx;
     double y = position.dy;
 
-    if (x > width)
+    if (x > width) {
       x = width;
-    if (x < 0)
+    }
+    else if (x < 0) {
       x = 0.0;
-    if (y > height)
+    }
+
+    if (y > height) {
       y = height;
-    if (y < 0)
+    } else if (y < 0) {
       y = 0.0;
+    }
 
     print('x:$x:$width, y:$y:$height');
 
