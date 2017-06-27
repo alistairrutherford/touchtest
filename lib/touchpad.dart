@@ -29,9 +29,26 @@ class TouchPadState extends State<TouchPad> {
     if (widget.onChanged != null)
       widget.onChanged(position);
 
+    double width = referenceBox.size.width;
+    double height = referenceBox.size.height;
+
+    double x = position.dx;
+    double y = position.dy;
+
+    if (x > width)
+      x = width;
+    if (x < 0)
+      x = 0.0;
+    if (y > height)
+      y = height;
+    if (y < 0)
+      y = 0.0;
+
+    print('x:$x:$width, y:$y:$height');
+
     setState(() {
-      xPos = position.dx - referenceBox.size.width/2;
-      yPos = position.dy - referenceBox.size.height/2;
+      xPos = x - (width / 2);
+      yPos = y - (height / 2);
     });
   }
 
