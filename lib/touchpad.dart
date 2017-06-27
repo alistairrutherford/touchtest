@@ -50,6 +50,7 @@ class TouchPadState extends State<TouchPad> {
 
     print('x:$x:$width, y:$y:$height');
 
+    // Update state.
     setState(() {
       xPos = x - (width / 2);
       yPos = y - (height / 2);
